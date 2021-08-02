@@ -1,0 +1,110 @@
+*, *::after, *::before{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	color: rgb(41, 41, 41);
+    background-image: linear-gradient(to bottom right,#AAF2BC,#4F7057);
+	height: 100vh;
+	overflow: hidden;
+}
+
+input, button, select{
+	background-color: transparent;
+	color: rgb(41, 41, 41);
+	font-weight: bold;
+	font-size: medium;
+	min-width: 44px;
+	min-height: 44px;
+	padding: .5rem;
+	border-radius: 0%;
+	border: solid rgba(39, 39, 39, 0.39) 2px;
+}
+
+select:hover{
+	background-color: #6aa879;
+	box-shadow: 0 0 5px #6aa879;
+	color: white;
+}
+
+input:focus{
+	outline: 3px solid #4F7057;
+}
+
+button, select{
+	cursor: pointer;
+}
+
+h1,select,option,button{
+	text-transform: capitalize;
+}
+
+.App{
+    max-width: 700px;
+    margin: 2rem auto;
+
+    h1{
+        text-align: center;
+    }
+
+    h1 + select{
+		width: 100%;
+		margin: 1rem 0;
+		padding: .5rem;
+	}
+
+	.container{
+		border: solid rgba(39, 39, 39, 0.39) 1px;
+		padding: 1rem 4rem;
+
+		h1{margin-bottom: 1rem;}
+
+		div{
+			margin-bottom: 1rem;
+			display: flex;
+			justify-content: space-between;
+
+			input{
+				flex-grow: 1;
+				margin-right: .5rem;
+			}
+
+			select{width: 100px;}
+		}
+	}
+
+	#clear-all-input{
+		width: 100%;
+	}
+
+	#clear-all-input:hover{
+		background-color: rgba(250, 0, 0, 0.651);
+		color: white;
+		box-shadow: 0 0 5px rgba(250, 0, 0, 0.651);
+	}
+
+	.info{
+		border: solid rgba(39, 39, 39, 0.39) 1px;
+		margin-top: .5rem;
+		padding: 2rem 4rem;
+
+		h3{
+			margin-bottom: .5rem;
+			font-weight: bold
+		}
+		h4{
+			font-weight: 700;
+			font-size: 1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.App{
+		margin: 2rem;
+	}
+}
+
