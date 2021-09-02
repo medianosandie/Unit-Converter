@@ -1,0 +1,215 @@
+{
+    "massa": [
+        {
+            "satuan": "kilogram",
+            "detail": [
+                {
+                    "operasi": "kilogram ke kilogram",
+                    "tujuan": "kilogram",
+                    "rumus": "input",
+                    "info": " "
+                },
+                {
+                    "operasi": "kilogram ke gram",
+                    "tujuan": "gram",
+                    "rumus": "input * 1000",
+                    "info": " * 1000 "
+                },
+                {
+                    "operasi": "kilogram ke miligram",
+                    "tujuan": "miligram",
+                    "rumus": "input * 1000000",
+                    "info": " * 1000000 "
+                }
+            ]
+        },
+        {
+            "satuan": "gram",
+            "detail": [
+                {
+                    "operasi": "gram ke kilogram",
+                    "tujuan": "kilogram",
+                    "rumus": "input / 1000",
+                    "info": " / 1000 "
+                },
+                {
+                    "operasi": "gram ke gram",
+                    "tujuan": "gram",
+                    "rumus": "input",
+                    "info": " "
+                },
+                {
+                    "operasi": "gram ke miligram",
+                    "tujuan": "miligram",
+                    "rumus": "input * 1000",
+                    "info": " * 1000 "
+                }
+            ]
+        },
+        {
+            "satuan": "miligram",
+            "detail": [
+                {
+                    "operasi": "miligram ke kilogram",
+                    "tujuan": "kilogram",
+                    "rumus": "input / 1000000",
+                    "info": " / 1000000 "
+                },
+                {
+                    "operasi": "miligram ke gram",
+                    "tujuan": "gram",
+                    "rumus": "input / 1000",
+                    "info": " / 1000 "
+                },
+                {
+                    "operasi": "miligram ke miligram",
+                    "tujuan": "miligram",
+                    "rumus": "input",
+                    "info": " "
+                }
+            ]
+        }
+    ],
+    "panjang" : [
+        {
+            "satuan": "kilometer",
+            "detail": [
+                {
+                    "operasi": "kilometer ke kilometer",
+                    "tujuan": "kilometer",
+                    "rumus": "input",
+                    "info": ""
+                },
+                {
+                    "operasi": "kilometer ke meter",
+                    "tujuan": "meter",
+                    "rumus": "input * 1000",
+                    "info": " * 1000"
+                },
+                {
+                    "operasi": "kilometer ke milimeter",
+                    "tujuan": "milimeter",
+                    "rumus": "input * 1000000",
+                    "info": " * 1000000"
+                }
+            ]
+        },
+        {
+            "satuan": "meter",
+            "detail": [
+                {
+                    "operasi": "meter ke kilometer",
+                    "tujuan": "kilometer",
+                    "rumus": "input / 1000",
+                    "info": " / 1000"
+                },
+                {
+                    "operasi": "meter ke meter",
+                    "tujuan": "meter",
+                    "rumus": "input",
+                    "info": ""
+                },
+                {
+                    "operasi": "meter ke milimeter",
+                    "tujuan": "milimeter",
+                    "rumus": "input * 1000",
+                    "info": "* 1000"
+                }
+            ]
+        },
+        {
+            "satuan": "milimeter",
+            "detail": [
+                {
+                    "operasi": "milimeter ke kilometer",
+                    "tujuan": "kilometer",
+                    "rumus": "input / 1000000",
+                    "info": " / 1000000"
+                },
+                {
+                    "operasi": "milimeter ke meter",
+                    "tujuan": "meter",
+                    "rumus": "input / 1000",
+                    "info": " / 1000 "
+                },
+                {
+                    "operasi": "milimeter ke milimeter",
+                    "tujuan": "milimeter",
+                    "rumus": "input",
+                    "info": ""
+                }
+            ]
+        }
+    ],
+    "suhu" : [
+        {
+            "satuan": "c",
+            "detail": [
+                {
+                    "operasi": "c ke c",
+                    "tujuan": "c",
+                    "rumus": "input",
+                    "info": ""
+                },
+                {
+                    "operasi": "c ke f",
+                    "tujuan": "f",
+                    "rumus": "(input * 9/5) + 32",
+                    "info": "* 9/5) + 32 "
+                },
+                {
+                    "operasi": "c ke k",
+                    "tujuan": "k",
+                    "rumus": "parseInt(input)  + parseInt(273.15)",
+                    "info": " + 273.15 "
+                }
+            ]
+        },
+        {
+            "satuan": "f",
+            "detail": [
+                {
+                    "operasi": "f ke c",
+                    "tujuan": "c",
+                    "rumus": "(input - 32) * 5/9",
+                    "info": "- 32) * 5/9 "
+                },
+                {
+                    "operasi": "f ke f",
+                    "tujuan": "f",
+                    "rumus": "input",
+                    "info": ""
+                },
+                {
+                    "operasi": "f ke k",
+                    "tujuan": "k",
+                    "rumus": "(input - 32) * 5/9 + 273.15",
+                    "info": " - 32) * 5/9 + 273.15 "
+                }
+            ]
+        },
+        {
+            "satuan": "k",
+            "detail": [
+                {
+                    "operasi": "k ke c",
+                    "tujuan": "c",
+                    "rumus": "parseInt(input)  - parseInt(273.15)",
+                    "info": "- 273.15"
+                },
+                {
+                    "operasi": "k ke f",
+                    "tujuan": "f",
+                    "rumus": "(input - 273.15) * 9/5 + 32",
+                    "info": "- 273.15) * 9/5 + 32"
+                },
+                {
+                    "operasi": "k ke k",
+                    "tujuan": "k",
+                    "rumus": "input",
+                    "info": ""
+                }
+            ]
+        }
+    ]
+}

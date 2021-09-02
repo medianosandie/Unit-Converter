@@ -2,10 +2,9 @@
 import React,{useState} from 'react';
 import './style/App.css';
 import Selector from './components/Selector';
-import Panjang from './components/Panjang';
-import Massa from './components/Massa';
-import Suhu from './components/Suhu';
+import Container from './components/Container';
 import Info from './components/Info';
+import {massa,panjang,suhu} from './data.json';
 
 function App() {
 
@@ -41,6 +40,7 @@ function App() {
 	function onClearAllButtonClick(){
 		setUserInput1(0);
 		setUserInput2(0);
+		setInfo(`${userInput1} ${unit1} = ${userInput1} ${unit1}`)
 	}
 
 	function getMode(event){
@@ -50,7 +50,7 @@ function App() {
 	function renderMode(){
 		if(mode === 'massa'){
 			return (
-				<Massa 
+				<Container 
 					setUserInput1={setUserInput1}
 					setUserInput2={setUserInput2}
 					setInfo={setInfo}
@@ -66,12 +66,14 @@ function App() {
 					onChangeUnit1={onChangeUnit1}
 					onChangeUnit2={onChangeUnit2}
 					onClearAllButtonClick={onClearAllButtonClick}
+					dataSatuan={massa}
+					title="Massa"
 				/>
 			);
 		}
 		if(mode === 'suhu'){
 			return (
-				<Suhu 
+				<Container 
 					setUserInput1={setUserInput1}
 					setUserInput2={setUserInput2}
 					setInfo={setInfo}
@@ -87,12 +89,14 @@ function App() {
 					onChangeUnit1={onChangeUnit1}
 					onChangeUnit2={onChangeUnit2}
 					onClearAllButtonClick={onClearAllButtonClick}
+					dataSatuan={suhu}
+					title="Suhu"
 				/>
 			);
 		}
 		if(mode === 'panjang'){
 			return (
-				<Panjang 
+				<Container 
 					setUserInput1={setUserInput1}
 					setUserInput2={setUserInput2}
 					setInfo={setInfo}
@@ -108,6 +112,8 @@ function App() {
 					onChangeUnit1={onChangeUnit1}
 					onChangeUnit2={onChangeUnit2}
 					onClearAllButtonClick={onClearAllButtonClick}
+					dataSatuan={panjang}
+					title="Panjang"
 				/>
 			);
 		}
