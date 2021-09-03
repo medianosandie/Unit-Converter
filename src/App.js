@@ -47,25 +47,30 @@ function App() {
 		setMode(event.target.value);
 	}
 
+	// const mode_name = ['massa','suhu','panjang']; 
+	const props = {
+		setUserInput1,
+		setUserInput2,
+		setInfo,
+		userInput1,
+		userInput2,
+		setUnit1,
+		setUnit2,
+		unit1,
+		unit2,
+		firstInputChanged,
+		onChangeInput1,
+		onChangeInput2,
+		onChangeUnit1,
+		onChangeUnit2,
+		onClearAllButtonClick
+	}
+
 	function renderMode(){
 		if(mode === 'massa'){
 			return (
 				<Container 
-					setUserInput1={setUserInput1}
-					setUserInput2={setUserInput2}
-					setInfo={setInfo}
-					userInput1={userInput1}
-					userInput2={userInput2}
-					setUnit1={setUnit1}
-					setUnit2={setUnit2}
-					unit1={unit1}
-					unit2={unit2}
-					firstInputChanged={firstInputChanged}
-					onChangeInput1={onChangeInput1}
-					onChangeInput2={onChangeInput2}
-					onChangeUnit1={onChangeUnit1}
-					onChangeUnit2={onChangeUnit2}
-					onClearAllButtonClick={onClearAllButtonClick}
+					{...props}
 					dataSatuan={massa}
 					title="Massa"
 				/>
@@ -74,21 +79,7 @@ function App() {
 		if(mode === 'suhu'){
 			return (
 				<Container 
-					setUserInput1={setUserInput1}
-					setUserInput2={setUserInput2}
-					setInfo={setInfo}
-					userInput1={userInput1}
-					userInput2={userInput2}
-					setUnit1={setUnit1}
-					setUnit2={setUnit2}
-					unit1={unit1}
-					unit2={unit2}
-					firstInputChanged={firstInputChanged}
-					onChangeInput1={onChangeInput1}
-					onChangeInput2={onChangeInput2}
-					onChangeUnit1={onChangeUnit1}
-					onChangeUnit2={onChangeUnit2}
-					onClearAllButtonClick={onClearAllButtonClick}
+					{...props}
 					dataSatuan={suhu}
 					title="Suhu"
 				/>
@@ -97,21 +88,7 @@ function App() {
 		if(mode === 'panjang'){
 			return (
 				<Container 
-					setUserInput1={setUserInput1}
-					setUserInput2={setUserInput2}
-					setInfo={setInfo}
-					userInput1={userInput1}
-					userInput2={userInput2}
-					setUnit1={setUnit1}
-					setUnit2={setUnit2}
-					unit1={unit1}
-					unit2={unit2}
-					firstInputChanged={firstInputChanged}
-					onChangeInput1={onChangeInput1}
-					onChangeInput2={onChangeInput2}
-					onChangeUnit1={onChangeUnit1}
-					onChangeUnit2={onChangeUnit2}
-					onClearAllButtonClick={onClearAllButtonClick}
+					{...props}
 					dataSatuan={panjang}
 					title="Panjang"
 				/>

@@ -1,5 +1,5 @@
 *, *::after, *::before{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -22,6 +22,14 @@ input, button, select{
 	padding: .5rem;
 	border-radius: 0%;
 	border: solid rgba(39, 39, 39, 0.39) 2px;
+}
+
+input{
+	padding: .5rem 1rem;
+}
+
+#suhu,.container,.info{
+	background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.123),rgba(255, 255, 255, 0.075));
 }
 
 select:hover{
@@ -70,9 +78,10 @@ h1,select,option,button{
 			input{
 				flex-grow: 1;
 				margin-right: .5rem;
+				background-color: white;
 			}
 
-			select{width: 100px;}
+			select{width: 110px;}
 		}
 	}
 
