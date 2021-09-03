@@ -40,7 +40,7 @@ function App() {
 	function onClearAllButtonClick(){
 		setUserInput1(0);
 		setUserInput2(0);
-		setInfo(`${userInput1} ${unit1} = ${userInput1} ${unit1}`)
+		setFirstInputChanged(false);
 	}
 
 	function getMode(event){
@@ -76,6 +76,7 @@ function App() {
 				/>
 			);
 		}
+		
 		if(mode === 'suhu'){
 			return (
 				<Container 

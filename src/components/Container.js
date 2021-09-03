@@ -31,8 +31,8 @@ export default function Container(props) {
 	},[dataSatuan]);
 
 	useEffect(()=>{
-		console.log(data)
 		setSatuan( data.map(item => item.satuan))
+		onClearAllButtonClick()
 	},[data]);
 
 	useEffect(()=>{
@@ -45,7 +45,6 @@ export default function Container(props) {
 		data.forEach((satuan)=>{
 			for(let i = 0 ; i < data.length ; i++){
 				if( satuanDari === satuan.satuan && satuanKe === satuan.detail[i].tujuan){
-					console.log('condtion passed')
 					setUserInput(eval(satuan.detail[i].rumus));
 					setInfo(`${input} ${satuanDari} ${satuan.detail[i].info} = ${hasil} ${satuanKe}`);
 				}
